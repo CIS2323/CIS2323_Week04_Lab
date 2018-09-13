@@ -17,6 +17,12 @@ public class Person{
 		return true;
 	}
 	
+	public void makeUser(String f, String l, int a, char s){
+		setFirstName(f,l);
+		sex = s;
+		age = a;
+	}
+	
 	public void setFirstName(String fName){
 		firstName = fName;
 		userId = userCount;
@@ -24,10 +30,8 @@ public class Person{
 	}
 	
 	public void setFirstName(String fName, String lName){
-		firstName = fName;
+		setFirstName(fName);
 		lastName = lName;
-		userId = userCount;
-		userCount++;
 	}
 	
 	public String getFirstName(){
